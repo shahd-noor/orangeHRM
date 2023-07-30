@@ -63,6 +63,15 @@ Feature: Admin user Grid
                Then User should see the success toast message with 'Successfully Deleteded'
    
 ```
+#  Custom Command for Sign-in:
+
+```
+Cypress.Commands.add("signInOrangeHRM", (username, password) => {
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(username); 
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(password); 
+    cy.get('.oxd-button').click(); 
+  });
+```
 
 # API :
 
