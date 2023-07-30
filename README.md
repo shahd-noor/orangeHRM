@@ -148,6 +148,9 @@ delete() {
   })
   }
 ```
+# How to run the test
+- Clone the repo
+- run the test from the cypress runner: npx cypress open --e2e --browser chrome
 
 
 
