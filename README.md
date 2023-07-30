@@ -2,7 +2,7 @@
 is an open-source demo of human resource management software. It allows users to explore HRM features like employee management, attendance tracking, and leave management.
 
 # Somke Test Case's :
-- Search
+- searching on Admin Users
 ```
 @smoke
 Feature: Searching on Admin Users 
@@ -161,6 +161,9 @@ delete() {
 - Clone the repo
 - run the test from the cypress runner: npx cypress open --e2e --browser chrome
 
+# Video for Test
 
+- searching on Admin Users :
+https://github.com/shahd-noor/orangeHRM/assets/68778771/8022142d-1656-46cb-afcf-f5be77639a6d
 
 
