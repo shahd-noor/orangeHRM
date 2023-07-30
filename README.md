@@ -157,13 +157,14 @@ delete() {
   })
   }
 ```
-# How to run the test
+# How to Run the Test
 - Clone the repo
 - run the test from the cypress runner: npx cypress open --e2e --browser chrome
 
-# Video for Test
+# Video for Run the Test:
 
 - searching on Admin Users :
 https://github.com/shahd-noor/orangeHRM/assets/68778771/8022142d-1656-46cb-afcf-f5be77639a6d
+- Admin User Grid
 
 
