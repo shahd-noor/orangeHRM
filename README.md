@@ -73,7 +73,7 @@ Cypress.Commands.add("signInOrangeHRM", (username, password) => {
   });
 ```
 
-# API :
+# API for Admin page :
 
 - Creat user:
 ```
