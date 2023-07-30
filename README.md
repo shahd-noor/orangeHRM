@@ -37,6 +37,59 @@ add(){
   })
 }
 ```
+-Update User
+```
+update() {
+  cy.request({
+    method: 'PUT',
+    url: 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users/1',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Cookie': 'orangehrm=52e5f4cc785b0f0a02f791f59a7430b5',
+      'Origin': 'https://opensource-demo.orangehrmlive.com/',
+      'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
+    },
+    body:
+    {
+      "username": "admin1235",
+      "password": "",
+      "status": true,
+      "userRoleId": 1,
+      "empNumber": 7,
+      "changePassword": false
+    }
+  }).then((response) => {
+    expect(response.status).to.equal(200);
+
+  })
+}
+```
+- Delete User
+```
+delete() {
+  cy.request({
+    method: "DELETE",
+    url: 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Cookie': 'orangehrm=52e5f4cc785b0f0a02f791f59a7430b5',
+      'Origin': 'https://opensource-demo.orangehrmlive.com/',
+      'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
+    },
+    body: {
+  
+      "ids": [
+        90
+      ]
+    }
+  }).then((response) => {
+    expect(response.status).to.equal(200);
+
+  })
+  }
+```
 
 
 
