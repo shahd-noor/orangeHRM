@@ -4,6 +4,6 @@ is an open-source demo of human resource management software. It allows users to
 
 #Test Case's:
 
-*Search
+Search
 *Admin User Grid
 
