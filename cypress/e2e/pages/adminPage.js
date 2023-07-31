@@ -127,10 +127,12 @@ class AdminPage {
         "have.text",
         "The selected record will be permanently deleted. Are you sure you want to continue?"
       );
+
       cy.get(".oxd-button--label-danger")
         .should("exist")
         .should("be.visible")
         .contains(" Yes, Delete");
+
       cy.get(".oxd-button--text")
         .should("exist")
         .should("be.visible")

@@ -78,7 +78,7 @@ class AddUserPage {
      ).click();
    }
  
-   selectStatusOption(optionText) {
+    selectStatusOption(optionText) {
      cy.get(
        ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input"
      ).click({ force: true });
@@ -94,27 +94,27 @@ class AddUserPage {
      );
    }
  
-   AdminPageAssertion() {
-     cy.url().should(
+    AdminPageAssertion() {
+      cy.url().should(
        "include",
        "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers"
-     );
+      );
    }
  
-   sucessSaveToastmessageAssertion() {
-     cy.contains("Successfully Saved")
+    sucessSaveToastmessageAssertion() {
+      cy.contains("Successfully Saved")
        .should("be.visible")
        .should("have.text", 
          "Successfully Saved"
-       );
+      );
    }
  
    sucessUpdateToastmessageAssertion() {
-     cy.contains("Successfully Updated")
+    cy.contains("Successfully Updated")
        .should("be.visible")
        .should("have.text",
           "Successfully Updated"
-       );
+    );
    }
  }
  export default AddUserPage;
