@@ -6,7 +6,7 @@ add(){
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Cookie': 'orangehrm=52e5f4cc785b0f0a02f791f59a7430b5',
+      'Cookie': 'orangehrm=06749ecd29c52d978328b0fc8858ddf7',
       'Origin': 'https://opensource-demo.orangehrmlive.com/',
       'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
       'sec-ch-ua': '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
@@ -33,7 +33,7 @@ update() {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Cookie': 'orangehrm=52e5f4cc785b0f0a02f791f59a7430b5',
+      'Cookie': 'orangehrm=06749ecd29c52d978328b0fc8858ddf7',
       'Origin': 'https://opensource-demo.orangehrmlive.com/',
       'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
     },
@@ -59,14 +59,15 @@ delete() {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Cookie': 'orangehrm=52e5f4cc785b0f0a02f791f59a7430b5',
+      'Cookie': 'orangehrm=ddfc0fc445eb3c05b2730594b33e2f16',
       'Origin': 'https://opensource-demo.orangehrmlive.com/',
       'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
     },
     body: {
-  
+
+     
       "ids": [
-        90
+        40
       ]
     }
   }).then((response) => {

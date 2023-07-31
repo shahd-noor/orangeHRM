@@ -5,9 +5,14 @@ import authRequest from "../api/authRequest.js";
 const addAdmin= new addAdminRequest();
 const auth= new authRequest();
 
-Given("Create user", ()=>{
+Given("Authuntecation", ()=>{
 
-    addAdmin.add()
+    auth.login();
+});
+
+And("Create user", ()=>{
+
+    addAdmin.add();
 });
 
 And("Update user", ()=>{
@@ -16,6 +21,8 @@ And("Update user", ()=>{
 });
 
 And("Delete user", ()=>{
-
+    
     addAdmin.delete();
 });
+
+

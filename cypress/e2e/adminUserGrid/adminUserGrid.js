@@ -2,12 +2,18 @@ import LoginPage from "../pages/loginPage.js";
 import AdminPage from "../pages/adminPage.js";
 import AddUserPage from "../pages/addUserPage.js";
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
+import addAdminRequest from "../api/addAdminRequest.js";
 
+const addAdmin= new addAdminRequest();
 const loginPage = new LoginPage();
 const adminPage = new AdminPage();
 const addUserPage = new AddUserPage();
 const username = "Admin";
 const password = "admin123";
+
+after("DELETE user after add",()=>{
+addAdmin.delete();
+});
 
 Given("User logged in", () => {
     
@@ -123,7 +129,7 @@ When ("User click on the trash icon for exisiting user",()=>{
      adminPage.clickTrashIcon();
 });
 
-Then ("'Are you Sure?' confirmation dialogue should be appear",()=>{
+Then ("'Are you Sure?' confirmation dialogue should be",()=>{
 
      adminPage.confirmationDialogueAssertion();
 }); 
