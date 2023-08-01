@@ -12,7 +12,7 @@ Feature: Searching on Admin Users
          And  User fills in the Employee Name field
          And  User select Status
          And  User click on Search button
-        #Then User should see the result in the Record Found
+        Then User should see the result in the Record Found
         
 
 

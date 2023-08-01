@@ -46,10 +46,6 @@ class AdminPage {
         ".oxd-button--label-danger"
       );
     }
-
-    get resultInRecordsFound(){
-      return cy.get('.oxd-table-card > .oxd-table-row');
-    }
   
     typeUsername() {
       this.usernameInput.type("Aaliyah.Haq");
@@ -117,17 +113,8 @@ class AdminPage {
     }
   
     confirmationDialogueAssertion() {
-      cy.contains("Are you Sure?")
-         .should("have.text", 
-             "Are you Sure?"
-          );
-      cy.contains(
-        "The selected record will be permanently deleted. Are you sure you want to continue?"
-      ).should(
-        "have.text",
-        "The selected record will be permanently deleted. Are you sure you want to continue?"
-      );
-
+      cy.contains(optionText).should("have.text", optionText);
+      
       cy.get(".oxd-button--label-danger")
         .should("exist")
         .should("be.visible")
@@ -147,6 +134,17 @@ class AdminPage {
       cy.contains("Successfully Deleted")
         .should("be.visible")
         .should("have.text", "Successfully Deleted");
+    }
+    
+    recordFoundAssertion(optionText) {
+      cy.contains(optionText)
+      .should("have.text", 
+                optionText
+       );
+    }
+
+     recordFoundActionAsserstion(){
+
     }
 }
   export default AdminPage;

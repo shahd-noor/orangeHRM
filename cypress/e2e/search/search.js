@@ -27,25 +27,28 @@ When("User fills in the Username field", () => {
 
 And ("User select User Role", () => {
    
-     adminPage.selectUserRoleOption("ESS");
+      adminPage.selectUserRoleOption("ESS");
 });
 
 And ("User fills in the Employee Name field", () => {
 
-     adminPage.typeEmployeeName();
+      adminPage.typeEmployeeName();
 });
 
 And ("User select Status", () => {
   
-     adminPage.selectStatusOption("Enabled");
+      adminPage.selectStatusOption("Enabled");
 
 });
 
 And ("User click on Search button", () =>  {
-
-     adminPage.clickSearchButton();
+      adminPage.clickSearchButton();
 });
 
  Then("User should see the result in the Record Found", () => {
+      adminPage.recordFoundAssertion("Aaliyah.Haq");
+      adminPage.recordFoundAssertion("ESS");
+      adminPage.recordFoundAssertion("Aaliyah Haq");
+      adminPage.recordFoundAssertion("Enabled");
 
  });

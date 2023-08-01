@@ -11,10 +11,6 @@ const addUserPage = new AddUserPage();
 const username = "Admin";
 const password = "admin123";
 
-after("DELETE user after add",()=>{
-addAdmin.delete();
-});
-
 Given("User logged in", () => {
     
      loginPage.load();
@@ -131,8 +127,10 @@ When ("User click on the trash icon for exisiting user",()=>{
 
 Then ("'Are you Sure?' confirmation dialogue should be",()=>{
 
-     adminPage.confirmationDialogueAssertion();
-}); 
+     adminPage.confirmationDialogueAssertion("Are you Sure?");
+     adminPage.confirmationDialogueAssertion(
+         "The selected record will be permanently deleted. Are you sure you want to continue?");
+     }); 
 
 //4
 Given("User logged in", () => {
@@ -156,7 +154,6 @@ Then ("User should see the success toast message with 'Successfully Deleteded'",
      adminPage.sucessDeleteToastmessageAssertion();    
 }); 
 
-
-
-
-
+after("DELETE user after add",()=>{
+     addAdmin.delete();
+     });

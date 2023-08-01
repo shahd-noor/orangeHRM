@@ -64,8 +64,6 @@ delete() {
       'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
     },
     body: {
-
-     
       "ids": [
         40
       ]

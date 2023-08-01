@@ -69,7 +69,7 @@ class AddUserPage {
      this.saveButton.click();
    }
  
-   selectUserRoleOption(optionText) {
+   selectUserRoleOption() {
      cy.get(
        ":nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input"
      ).click({ force: true });
@@ -78,7 +78,7 @@ class AddUserPage {
      ).click();
    }
  
-    selectStatusOption(optionText) {
+    selectStatusOption() {
      cy.get(
        ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input"
      ).click({ force: true });
