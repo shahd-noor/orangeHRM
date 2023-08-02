@@ -47,13 +47,13 @@ class AdminPage {
       );
     }
   
-    typeUsername() {
-      this.usernameInput.type("Aaliyah.Haq");
+    typeUsername(optionText) {
+      this.usernameInput.type(optionText);
     }
   
-    typeEmployeeName() {
+    typeEmployeeName(optionText) {
   
-      this.employeeNameInput.type("Aaliyah Haq");
+      this.employeeNameInput.type(optionText);
       cy.wait(2000);
       cy.get('.oxd-autocomplete-option').eq(0).click();
     }
@@ -112,9 +112,10 @@ class AdminPage {
       this.trashIcon.click({ force: true });
     }
   
-    confirmationDialogueAssertion() {
+    confirmationDialogueTextAssertion(optionText) {
       cy.contains(optionText).should("have.text", optionText);
-      
+    }
+    confirmationDialogueButtonsAssertion() {
       cy.get(".oxd-button--label-danger")
         .should("exist")
         .should("be.visible")
@@ -143,9 +144,22 @@ class AdminPage {
        );
     }
 
-     recordFoundActionAsserstion(){
+    recordFoundActionAsserstion(){
+      cy.get(
+         ':nth-child(1) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1) > .oxd-icon'
+      )
+        .should("exist")
+        .should("be.visible");
 
-    }
+      cy.get(
+        '.oxd-table-cell-actions > :nth-child(2) > .oxd-icon' 
+       )
+         .should("exist")
+         .should("be.visible");
+ 
+
+      
+     }    
 }
   export default AdminPage;
   

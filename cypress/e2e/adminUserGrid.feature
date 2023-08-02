@@ -24,12 +24,12 @@ Feature: Admin user Grid
            When User Edit username field
            And User click on save button
            Then User should see the success toast message with'Successfully Updated'
-
+#@focus
        Scenario: #3.1 Admin Should be able to delete for an existing user by confirmation dialogue appears
               Given User logged in 
               And User visits the admin page
               When User click on the trash icon for exisiting user
-              Then 'Are you Sure?' confirmation dialogue should be 
+              Then 'Are you Sure?' confirmation dialogue should be appeard
               When User click on the Yes,Delete button
               Then User should see the success toast message with 'Successfully Deleteded'
 

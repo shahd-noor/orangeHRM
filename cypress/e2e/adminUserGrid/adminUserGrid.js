@@ -125,13 +125,13 @@ When ("User click on the trash icon for exisiting user",()=>{
      adminPage.clickTrashIcon();
 });
 
-Then ("'Are you Sure?' confirmation dialogue should be",()=>{
+Then ("'Are you Sure?' confirmation dialogue should be appeard",()=>{
 
-     adminPage.confirmationDialogueAssertion("Are you Sure?");
-     adminPage.confirmationDialogueAssertion(
+     adminPage.confirmationDialogueTextAssertion("Are you Sure?");
+     adminPage.confirmationDialogueTextAssertion(
          "The selected record will be permanently deleted. Are you sure you want to continue?");
-     }); 
-
+     adminPage.confirmationDialogueButtonsAssertion();
+     });
 //4
 Given("User logged in", () => {
     

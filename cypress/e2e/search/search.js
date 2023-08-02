@@ -22,7 +22,7 @@ And("User visits the Admin page", () => {
 
 When("User fills in the Username field", () => {
 
-      adminPage.typeUsername();
+      adminPage.typeUsername("Charlie.Carter1");
 });
 
 And ("User select User Role", () => {
@@ -32,7 +32,7 @@ And ("User select User Role", () => {
 
 And ("User fills in the Employee Name field", () => {
 
-      adminPage.typeEmployeeName();
+      adminPage.typeEmployeeName("Charlie Carter");
 });
 
 And ("User select Status", () => {
@@ -46,9 +46,10 @@ And ("User click on Search button", () =>  {
 });
 
  Then("User should see the result in the Record Found", () => {
-      adminPage.recordFoundAssertion("Aaliyah.Haq");
+      adminPage.recordFoundAssertion("Charlie.Carter1");
       adminPage.recordFoundAssertion("ESS");
-      adminPage.recordFoundAssertion("Aaliyah Haq");
+      adminPage.recordFoundAssertion("Charlie Carter");
       adminPage.recordFoundAssertion("Enabled");
+      adminPage.recordFoundActionAsserstion();
 
  });

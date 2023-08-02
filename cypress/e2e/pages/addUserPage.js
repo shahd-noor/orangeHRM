@@ -52,7 +52,7 @@ class AddUserPage {
    }
  
    typeUsername() {
-     this.usernameInput.clear().type("soniaa.adm@1");
+     this.usernameInput.clear().type("soniaa.adm129");
    }
  
    typeConfirmPassword() {
