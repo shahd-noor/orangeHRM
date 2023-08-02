@@ -93,9 +93,8 @@ Then ("User should see the Add User page",()=> {
      adminPage.AddUserPageAssertion();
 }); 
 
-When ("User Edit username field",()=> {
-
-     addUserPage.typeUsername();
+When ("User Edit User Role field",()=> {
+     addUserPage.selectUserRoleOption("Admin");
 });
 
 And("User click on save button",()=> {

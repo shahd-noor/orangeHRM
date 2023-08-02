@@ -59,7 +59,7 @@ delete() {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Cookie': 'orangehrm=932668fd64f28dd0f4adc707059f01fc',
+      'Cookie': 'orangehrm=8b07ad89ded7aaf5ac50028d69eb1c61',
       'Origin': 'https://opensource-demo.orangehrmlive.com/',
       'Referer': 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser',
     },

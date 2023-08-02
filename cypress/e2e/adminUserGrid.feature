@@ -15,16 +15,16 @@ Feature: Admin user Grid
            And User fills in the Employee Name field
            And User click on save button
            Then User should see the success toast message with'successfully saved'text returned
-
+@focus
        Scenario: #2 Admin Should be able to update the username for an existing user
            Given User logged in
            And User visits the admin page
            When User click on Edit icon  for exisiting user         
            Then User should see the Add User page
-           When User Edit username field
+            When User Edit User Role field
            And User click on save button
            Then User should see the success toast message with'Successfully Updated'
-#@focus
+
        Scenario: #3.1 Admin Should be able to delete for an existing user by confirmation dialogue appears
               Given User logged in 
               And User visits the admin page
