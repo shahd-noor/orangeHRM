@@ -32,28 +32,5 @@ Cypress.Commands.add("signInOrangeHRM", (username, password) => {
     cy.get('.oxd-button').click(); 
   });
 
-
-// Cypress.Commands.add("loginToOrangeHRM", () => {
-//   const apiUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/events/push";
-//   const requestBody = {
-//     userName: "admin",
-//     password: "admin123"
-//   };
-
-//   cy.request({
-//     method: "POST",
-//     url: apiUrl,
-//     headers: {
-//       Accept: "application/json",
-//       "Content-Type": "application/json",
-//       Origin: "https://opensource-demo.orangehrmlive.com/",
-//       Referer: "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
-//       Cookie: "orangehrm=ddeb9add324b0e85409465865f454334"
-//     },
-//     body: requestBody
-//   });
-// });
-
-
   
   
